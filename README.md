@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @mashley
+- 👋 Hi, I’m Mash (Michael) Ashley aka @mashley here on GitHub
 - 👀 I’m interested in helping marketing, product and engineering teams get organized, focused and moving in the same direction, so they can execute faster on missions that matter.
 - 🌱 I’m currently on the #StartupJourney with @corl8
 - 💞️ I’m looking to collaborate on golang, vue.js and other cool projects
