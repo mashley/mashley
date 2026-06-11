@@ -110,6 +110,35 @@
       box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
     }
 
+    /* ---------- Podcast + community feature cards ---------- */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 24px;
+    }
+    .feature {
+      background: var(--cream);
+      border-radius: 18px;
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .feature h3 { font-size: 1.3rem; margin-bottom: 12px; }
+    .feature p { color: var(--muted); margin-bottom: 22px; flex: 1; }
+    .btn-outline {
+      align-self: flex-start;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--orange-dark);
+      border: 2px solid var(--orange);
+      padding: 11px 22px;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .btn-outline:hover { background: var(--orange); color: #fff; }
+
     /* ---------- "How I help" cards ---------- */
     .cards {
       display: grid;
@@ -153,6 +182,7 @@
       .hero { padding: 70px 0 60px; }
       .cards { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .feature-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -173,19 +203,14 @@
     </div>
   </header>
 
-  <!-- About -->
+  <!-- Intro / empathy -->
   <section>
-    <div class="wrap">
-      <div class="about-grid">
-        <div>
-          <h2>Starting a business is hard. You don't have to figure it out alone.</h2>
-          <p class="lead">Every new founder hits the same walls — too many decisions,
-             not enough clarity, and no one to think it through with. I've helped
-             people through those exact moments. Together we'll cut through the noise,
-             make the right calls, and get your business moving in the right direction.</p>
-        </div>
-        <img class="about-photo" src="images/michael.jpg" alt="Michael Ashley">
-      </div>
+    <div class="wrap" style="text-align: center;">
+      <h2>Starting a business is hard. You don't have to figure it out alone.</h2>
+      <p class="lead" style="margin: 0 auto;">Every new founder hits the same walls — too many decisions,
+         not enough clarity, and no one to think it through with. I've helped
+         people through those exact moments. Together we'll cut through the noise,
+         make the right calls, and get your business moving in the right direction.</p>
     </div>
   </section>
 
@@ -215,6 +240,55 @@
           <h3>Grow with confidence</h3>
           <p>An experienced sounding board in your corner, so you make decisions
              with clarity instead of second-guessing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Mash -->
+  <section>
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <h2>25 years helping founders turn ideas into traction.</h2>
+          <p class="lead">Hi — I'm Michael Ashley, though most founders just call me
+             <strong>Mash</strong>. I've spent more than 25 years at the intersection of
+             innovation, strategy, and execution: co-founding and scaling startups
+             (with four successful exits), guiding dozens of companies from concept to
+             traction, and launching a startup incubator at San José State University,
+             where I also taught hundreds of aspiring founders as an adjunct professor.</p>
+          <p class="lead">Today I pour that experience into <strong>Inspiring Founders</strong>,
+             helping bootstrapped founders find focus, clarity, and alignment through
+             peer groups, hands-on advising, and the smart use of AI. I also build
+             Foclarity, a go-to-market platform for CEOs, and Radi8, an AI-powered
+             marketing platform. The throughline in all of it: help you cut through
+             complexity, focus on what matters most, and turn bold plans into real results.</p>
+        </div>
+        <img class="about-photo" src="images/michael.jpg" alt="Michael Ashley (Mash)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Podcast + community -->
+  <section style="background: var(--cream); border-radius: 24px;">
+    <div class="wrap">
+      <h2>More ways to learn with me</h2>
+      <p class="lead">Working together one-on-one isn't the only way in. Founders also
+         learn alongside me through the podcast and the Inspiring Founders community.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>🎙️ The Inspiring Founders Podcast</h3>
+          <p>Every Thursday I sit down with founders and leaders — from first-time
+             builders to CEOs scaling past $10M — to unpack what actually works.
+             Listen on Spotify, Apple Podcasts, or YouTube.</p>
+          <a class="btn-outline" href="https://www.inspiringfounders.com/podcast" target="_blank" rel="noopener">Listen to the podcast →</a>
+        </div>
+        <div class="feature">
+          <h3>👥 The Inspiring Founders Community</h3>
+          <p>A Skool community where founders learn from each other every week —
+             peer groups, candid conversations, and real support for building MVPs,
+             landing first customers, and growing without big funding.</p>
+          <a class="btn-outline" href="https://www.inspiringfounders.com" target="_blank" rel="noopener">Join the community →</a>
         </div>
       </div>
     </div>
