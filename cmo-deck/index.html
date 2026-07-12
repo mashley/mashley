@@ -3,187 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Fractional CMO — Mash Ashley (Pitch Deck)</title>
+  <title>Fractional CMO — Mash (Pitch Deck)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
   <!-- ============================================================
-       A self-contained slide deck. No dependencies.
-       Navigate: arrow keys / space (laptop), swipe (phone/iPad),
-       or the on-screen ‹ › buttons. Press F for fullscreen.
+       Self-contained slide deck on the mashley.com brand system.
+       Navigate: arrows / space (laptop), swipe (phone/iPad),
+       or the ‹ › buttons. Press F for fullscreen.
        ============================================================ -->
   <style>
     :root {
-      --orange: #FF6B2C;
-      --orange-dark: #E8551A;
-      --lime: #A8D818;
-      --ink: #1C1C28;
-      --muted: #5A5A6E;
-      --cream: #FFF8F2;
-      --white: #FFFFFF;
-      --line: #ECE6DF;
+      --tangerine: #E05A20; --sienna: #C94E18; --navy: #1A1A2E;
+      --white: #FFFFFF; --ink: #1C1B24; --muted: #6E6874; --line: #ECE1D8;
+      --cream: #FBEBDD; --peach: #F7D6BC; --rust: #B0400F;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
     html, body {
-      height: 100%;
-      overflow: hidden;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--ink);
-      background: var(--ink);
+      height: 100%; overflow: hidden;
+      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink); background: var(--navy);
     }
-
     #deck { position: fixed; inset: 0; }
 
-    /* ---------- Each slide fills the screen ---------- */
     .slide {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: safe center;
-      justify-content: center;
-      overflow-y: auto;
-      padding: clamp(28px, 6vw, 90px);
-      padding-bottom: 110px; /* room for the nav bar */
-      background: var(--white);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(14px);
+      position: absolute; inset: 0; display: flex; align-items: safe center; justify-content: center;
+      overflow-y: auto; padding: clamp(28px, 6vw, 90px); padding-bottom: 110px;
+      background: var(--white); opacity: 0; visibility: hidden; transform: translateY(14px);
       transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
     }
     .slide.active { opacity: 1; visibility: visible; transform: none; }
+    .inner { width: 100%; max-width: 920px; }
 
-    .inner { width: 100%; max-width: 900px; }
-
-    /* backgrounds for variety */
-    .slide.tint { background: linear-gradient(135deg, #FFF1E8 0%, #F3FBDD 100%); }
+    /* Slide backgrounds — orange tint system */
+    .slide.tint  { background: var(--tangerine); color: #fff; }
     .slide.cream { background: var(--cream); }
-    .slide.dark { background: var(--ink); color: var(--white); }
+    .slide.peach { background: var(--peach); }
+    .slide.dark  { background: var(--navy); color: #fff; }
 
-    /* ---------- Typography ---------- */
+    .logo { height: 44px; width: auto; display: block; margin-bottom: clamp(22px, 4vw, 36px); }
+
+    /* Type */
+    h1, h2, h3 { font-weight: 300; letter-spacing: -0.02em; line-height: 1.06; }
     .kicker {
-      display: inline-block;
-      background: var(--lime);
-      color: var(--ink);
-      font-weight: 700;
-      font-size: clamp(0.7rem, 1.5vw, 0.82rem);
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 999px;
+      display: inline-block; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
+      font-size: clamp(0.72rem, 1.5vw, 0.84rem); color: var(--tangerine);
       margin-bottom: clamp(16px, 3vw, 26px);
     }
-    h1 {
-      font-size: clamp(2rem, 6.4vw, 4.2rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      margin-bottom: clamp(14px, 2.5vw, 24px);
-    }
-    h1 .accent { color: var(--orange); }
-    h2 {
-      font-size: clamp(1.6rem, 4.6vw, 3rem);
-      line-height: 1.12;
-      letter-spacing: -0.015em;
-      margin-bottom: clamp(14px, 2.4vw, 26px);
-    }
-    .lead {
-      font-size: clamp(1.05rem, 2.4vw, 1.5rem);
-      color: var(--muted);
-      max-width: 760px;
-      line-height: 1.5;
-    }
+    .tint .kicker, .dark .kicker { color: rgba(255,255,255,0.9); }
+    h1 { font-size: clamp(2rem, 6.4vw, 4.4rem); margin-bottom: clamp(14px, 2.5vw, 24px); letter-spacing: -0.03em; }
+    h1 .thin { display: block; font-weight: 300; font-size: 0.62em; margin-bottom: 0.08em; }
+    h1 .fat  { display: block; font-weight: 800; letter-spacing: -0.035em; }
+    h2 { font-size: clamp(1.6rem, 4.6vw, 3rem); margin-bottom: clamp(14px, 2.4vw, 26px); letter-spacing: -0.02em; }
+    h2 .accent { font-weight: 800; color: var(--tangerine); }
+    .lead { font-size: clamp(1.05rem, 2.4vw, 1.5rem); color: var(--muted); max-width: 800px; line-height: 1.5; }
+    .tint .lead { color: rgba(255,255,255,0.95); }
     .dark .lead { color: #C9C9D6; }
-    .name-line {
-      margin-top: clamp(20px, 4vw, 38px);
-      font-weight: 700;
-      font-size: clamp(1rem, 2.2vw, 1.25rem);
-    }
+    .name-line { margin-top: clamp(20px, 4vw, 38px); font-weight: 700; font-size: clamp(1rem, 2.2vw, 1.25rem); }
+    .tint .name-line span { color: rgba(255,255,255,0.8); font-weight: 600; }
     .name-line span { color: var(--muted); font-weight: 600; }
 
-    /* ---------- Pain list ---------- */
+    /* Pains */
     .pains { margin-top: clamp(18px, 3vw, 34px); display: grid; gap: clamp(12px, 1.8vw, 18px); }
-    .pain {
-      display: flex; gap: 16px; align-items: flex-start;
-      font-size: clamp(1.05rem, 2.5vw, 1.55rem);
-      line-height: 1.35;
-    }
+    .pain { display: flex; gap: 16px; align-items: flex-start; font-size: clamp(1.05rem, 2.5vw, 1.55rem); line-height: 1.35; }
     .pain .n {
-      flex: none; width: clamp(30px, 5vw, 40px); height: clamp(30px, 5vw, 40px);
-      border-radius: 50%; background: rgba(255,107,44,0.14); color: var(--orange-dark);
-      font-weight: 800; display: flex; align-items: center; justify-content: center;
-      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      flex: none; width: clamp(30px, 5vw, 40px); height: clamp(30px, 5vw, 40px); border-radius: 50%;
+      background: rgba(224,90,32,0.13); color: var(--sienna); font-weight: 800;
+      display: flex; align-items: center; justify-content: center; font-size: clamp(0.9rem, 2vw, 1.15rem);
     }
 
-    /* ---------- Not-this / this ---------- */
+    /* Compare */
     .cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.5vw, 26px); margin-top: clamp(18px, 3vw, 32px); }
     .col { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: clamp(20px, 3vw, 32px); }
-    .col.good { border: 2px solid var(--orange); }
-    .col h3 { font-size: clamp(1.05rem, 2.2vw, 1.4rem); margin-bottom: 14px; }
+    .col.good { border: 2px solid var(--tangerine); }
+    .col h3 { font-weight: 500; font-size: clamp(1.05rem, 2.2vw, 1.4rem); margin-bottom: 14px; }
     .col ul { list-style: none; }
-    .col li {
-      position: relative; padding: 10px 0 10px 30px; color: var(--muted);
-      border-top: 1px solid var(--line); font-size: clamp(0.98rem, 1.9vw, 1.18rem); line-height: 1.35;
-    }
+    .col li { position: relative; padding: 10px 0 10px 30px; color: var(--muted); border-top: 1px solid var(--line); font-size: clamp(0.98rem, 1.9vw, 1.18rem); line-height: 1.35; }
     .col li:first-of-type { border-top: none; }
     .col.good li { color: var(--ink); }
     .col li::before { position: absolute; left: 0; top: 10px; font-weight: 800; }
-    .col.bad li::before { content: "✕"; color: #C0332B; }
-    .col.good li::before { content: "✓"; color: var(--lime); }
+    .col.bad li::before { content: "✕"; color: #B0402F; }
+    .col.good li::before { content: "✓"; color: var(--tangerine); }
 
-    /* ---------- Why me ---------- */
+    /* Why me */
     .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 24px); margin-top: clamp(18px, 3vw, 30px); }
-    .box { background: var(--white); border-radius: 16px; padding: clamp(20px, 2.6vw, 30px); border-top: 4px solid var(--orange); }
-    .box:nth-child(2) { border-top-color: var(--lime); }
-    .box:nth-child(3) { border-top-color: var(--ink); }
-    .box h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); margin-bottom: 10px; }
+    .box { background: var(--white); border-radius: 16px; padding: clamp(20px, 2.6vw, 30px); border-top: 4px solid var(--tangerine); }
+    .box:nth-child(2) { border-top-color: var(--sienna); }
+    .box:nth-child(3) { border-top-color: var(--navy); }
+    .box h3 { font-weight: 500; font-size: clamp(1.05rem, 2vw, 1.3rem); margin-bottom: 10px; }
     .box p { color: var(--muted); font-size: clamp(0.95rem, 1.8vw, 1.12rem); line-height: 1.4; }
     .chips { margin-top: clamp(20px, 3.5vw, 36px); display: flex; flex-wrap: wrap; gap: 10px; }
     .chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; font-weight: 600; font-size: clamp(0.85rem, 1.7vw, 1.02rem); }
-    .chip b { color: var(--orange-dark); }
+    .chip b { color: var(--sienna); }
 
-    /* ---------- Scope tags ---------- */
+    /* Scope tags */
     .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(18px, 3vw, 28px); }
     .tag { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: clamp(0.95rem, 1.9vw, 1.15rem); }
     .addon-note { margin-top: clamp(20px, 3vw, 30px); color: var(--muted); font-size: clamp(0.95rem, 1.9vw, 1.15rem); }
     .addon-note b { color: var(--ink); }
 
-    /* ---------- Price slide ---------- */
+    /* Price slide (navy) */
     .price-big { font-size: clamp(3.4rem, 12vw, 7rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
-    .price-big .u { font-size: 0.32em; font-weight: 600; color: var(--lime); }
+    .price-big .u { font-size: 0.32em; font-weight: 600; color: var(--peach); }
     .price-sub { font-size: clamp(1.05rem, 2.4vw, 1.5rem); color: #C9C9D6; margin-top: 12px; }
     .price-list { list-style: none; margin-top: clamp(22px, 3.5vw, 34px); display: grid; gap: 10px; }
-    .price-list li { position: relative; padding-left: 34px; font-size: clamp(1rem, 2.1vw, 1.3rem); color: #E7E7EE; }
-    .price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--lime); font-weight: 800; }
-    .roi { margin-top: clamp(24px, 4vw, 38px); border-left: 4px solid var(--orange); padding: clamp(16px, 2.4vw, 22px) clamp(18px, 2.6vw, 26px);
+    .price-list li { position: relative; padding-left: 34px; font-size: clamp(1rem, 2.1vw, 1.3rem); color: #E9E9EE; }
+    .price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--tangerine); font-weight: 800; }
+    .roi { margin-top: clamp(24px, 4vw, 38px); border-left: 4px solid var(--tangerine); padding: clamp(16px, 2.4vw, 22px) clamp(18px, 2.6vw, 26px);
       background: rgba(255,255,255,0.06); border-radius: 0 14px 14px 0; font-size: clamp(1rem, 2vw, 1.28rem); line-height: 1.45; color: #EDEDF2; }
-    .roi b { color: var(--orange); }
+    .roi b { color: var(--peach); }
 
-    /* ---------- Nav bar ---------- */
+    /* Nav */
     #nav {
-      position: fixed; left: 50%; transform: translateX(-50%);
-      bottom: max(18px, env(safe-area-inset-bottom));
-      display: flex; align-items: center; gap: 14px;
-      background: rgba(28,28,40,0.82); backdrop-filter: blur(8px);
-      padding: 8px 10px; border-radius: 999px; z-index: 50;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      position: fixed; left: 50%; transform: translateX(-50%); bottom: max(18px, env(safe-area-inset-bottom));
+      display: flex; align-items: center; gap: 14px; background: rgba(26,26,46,0.88); backdrop-filter: blur(8px);
+      padding: 8px 10px; border-radius: 999px; z-index: 50; box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
     #nav button {
       border: none; cursor: pointer; width: 44px; height: 44px; border-radius: 50%;
-      background: rgba(255,255,255,0.12); color: #fff; font-size: 1.4rem; line-height: 1;
+      background: rgba(255,255,255,0.14); color: #fff; font-size: 1.4rem; line-height: 1;
       display: flex; align-items: center; justify-content: center; transition: background 0.15s;
     }
-    #nav button:hover:not(:disabled) { background: var(--orange); }
+    #nav button:hover:not(:disabled) { background: var(--tangerine); }
     #nav button:disabled { opacity: 0.35; cursor: default; }
     #counter { color: #fff; font-weight: 700; font-size: 0.95rem; min-width: 54px; text-align: center; font-variant-numeric: tabular-nums; }
     #fs { position: fixed; top: 16px; right: 16px; z-index: 50; border: none; cursor: pointer;
-      background: rgba(28,28,40,0.55); color: #fff; border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; }
-    #fs:hover { background: var(--orange); }
-
-    /* progress */
-    #bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--orange); width: 0; z-index: 50; transition: width 0.4s ease; }
+      background: rgba(26,26,46,0.6); color: #fff; border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; }
+    #fs:hover { background: var(--tangerine); }
+    #bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--navy); width: 0; z-index: 50; transition: width 0.4s ease; }
+    .tint ~ #bar { background: var(--navy); }
 
     @media (max-width: 720px) {
       .cols, .three { grid-template-columns: 1fr; }
-      #fs { display: none; } /* phones present via swipe; hide fullscreen toggle */
+      #fs { display: none; }
     }
   </style>
 </head>
@@ -197,11 +151,12 @@
     <!-- 1 — Title -->
     <section class="slide tint active">
       <div class="inner">
+        <img class="logo" src="../images/SVG/mash-logo.svg" alt="Mash">
         <span class="kicker">Fractional CMO · For technical founders</span>
-        <h1>You built the product.<br>Now let's get people to <span class="accent">use it</span>.</h1>
-        <p class="lead">The strategy, the leadership, and an AI-powered marketing engine to turn
-           what you built into customers — at an early-founder price.</p>
-        <div class="name-line">Mash Ashley &nbsp;·&nbsp; <span>Fractional CMO</span></div>
+        <h1><span class="thin">You built the product.</span><span class="fat">Let's get customers.</span></h1>
+        <p class="lead">I set the strategy and own the growth — my team and AI tools do the heavy lifting.
+           A real go-to-market engine, at an early-founder price.</p>
+        <div class="name-line">Mash &nbsp;·&nbsp; <span>Fractional CMO</span></div>
       </div>
     </section>
 
@@ -209,7 +164,7 @@
     <section class="slide">
       <div class="inner">
         <span class="kicker">The situation</span>
-        <h2>Sound familiar?</h2>
+        <h2>Sound <span class="accent">familiar?</span></h2>
         <div class="pains">
           <div class="pain"><span class="n">1</span><span>Your product works — but you can't get anyone to actually use it.</span></div>
           <div class="pain"><span class="n">2</span><span>A website and some social, but no funnel and no strategy behind them.</span></div>
@@ -224,15 +179,15 @@
     <section class="slide cream">
       <div class="inner">
         <span class="kicker">The role</span>
-        <h2>What a fractional CMO actually is</h2>
+        <h2>What a fractional CMO <span class="accent">actually is</span></h2>
         <p class="lead">Senior marketing leadership — strategy, direction, and ownership of your growth —
            without the cost of a full-time hire.</p>
         <div class="cols">
           <div class="col good">
             <h3>What you get with me</h3>
             <ul>
-              <li>A proven operator who owns your marketing</li>
-              <li>An AI engine that executes it — fast and affordably</li>
+              <li>A senior leader who owns your growth and sets the strategy</li>
+              <li>My team + AI engine (Radi8) doing the execution</li>
               <li>Weekly, in-person working sessions</li>
               <li>A system you keep running after we're done</li>
             </ul>
@@ -254,7 +209,7 @@
     <section class="slide">
       <div class="inner">
         <span class="kicker">Why me</span>
-        <h2>The experience — and the tools to act on it.</h2>
+        <h2>The experience — <span class="accent">and the tools</span> to act on it.</h2>
         <div class="three">
           <div class="box">
             <h3>Built &amp; exited</h3>
@@ -280,11 +235,12 @@
     </section>
 
     <!-- 5 — What we cover -->
-    <section class="slide">
+    <section class="slide peach">
       <div class="inner">
         <span class="kicker">Scope</span>
         <h2>What we cover together</h2>
-        <p class="lead">The full marketing stack — as much of each as your business needs.</p>
+        <p class="lead">I set the direction; my team and Radi8 execute across the full stack —
+           as much of each as your business needs.</p>
         <div class="tags">
           <span class="tag">Brand</span>
           <span class="tag">Strategy</span>
@@ -312,7 +268,7 @@
         <ul class="price-list">
           <li>Weekly in-person working sessions</li>
           <li>Full strategy &amp; go-to-market plan</li>
-          <li>Hands-on execution powered by Radi8</li>
+          <li>Execution handled by my team + Radi8</li>
           <li>A repeatable playbook that's yours to keep</li>
         </ul>
         <div class="roi"><b>Perspective:</b> land one or two B2B customers out of this and it pays for itself.
@@ -323,11 +279,12 @@
     <!-- 7 — Close -->
     <section class="slide tint">
       <div class="inner">
+        <img class="logo" src="../images/SVG/mash-logo.svg" alt="Mash">
         <span class="kicker">Let's do this</span>
-        <h1>Let's build your <span class="accent">growth engine</span>.</h1>
+        <h1><span class="fat">Let's build your growth engine.</span></h1>
         <p class="lead">If it feels like a fit, we shake on it today — I'll send a simple agreement with
            terms, and we start next week.</p>
-        <div class="name-line">Mash Ashley &nbsp;·&nbsp; <span>Fractional CMO for technical founders</span></div>
+        <div class="name-line">Mash &nbsp;·&nbsp; <span>Fractional CMO for technical founders</span></div>
       </div>
     </section>
 
@@ -355,7 +312,6 @@
       bar.style.width = ((i + 1) / slides.length * 100) + '%';
       prevBtn.disabled = (i === 0);
       nextBtn.disabled = (i === slides.length - 1);
-      // reset scroll position of the newly shown slide
       slides[i].scrollTop = 0;
     }
     function next() { show(i + 1); }
@@ -373,7 +329,6 @@
       else if (k === 'f' || k === 'F') { toggleFs(); }
     });
 
-    // Swipe (horizontal only, so vertical scrolling still works)
     var sx = 0, sy = 0;
     var deck = document.getElementById('deck');
     deck.addEventListener('touchstart', function (e) {
@@ -385,7 +340,6 @@
       if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) { dx < 0 ? next() : prev(); }
     }, { passive: true });
 
-    // Fullscreen
     var fsBtn = document.getElementById('fs');
     function toggleFs() {
       if (!document.fullscreenElement) {
