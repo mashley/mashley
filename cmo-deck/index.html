@@ -35,7 +35,7 @@
       transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
     }
     .slide.active { opacity: 1; visibility: visible; transform: none; }
-    .inner { width: 100%; max-width: 920px; }
+    .inner { width: 100%; max-width: 1180px; }
 
     /* Slide backgrounds — orange tint system */
     .slide.tint  { background: var(--tangerine); color: #fff; }
@@ -43,44 +43,44 @@
     .slide.peach { background: var(--peach); }
     .slide.dark  { background: var(--navy); color: #fff; }
 
-    .logo { height: 44px; width: auto; display: block; margin-bottom: clamp(22px, 4vw, 36px); }
+    .logo { height: 56px; width: auto; display: block; margin-bottom: clamp(26px, 4vw, 44px); }
 
     /* Type */
     h1, h2, h3 { font-weight: 300; letter-spacing: -0.02em; line-height: 1.06; }
     .kicker {
       display: inline-block; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
-      font-size: clamp(0.72rem, 1.5vw, 0.84rem); color: var(--tangerine);
-      margin-bottom: clamp(16px, 3vw, 26px);
+      font-size: clamp(0.82rem, 1.7vw, 1.05rem); color: var(--tangerine);
+      margin-bottom: clamp(18px, 3vw, 30px);
     }
     .tint .kicker, .dark .kicker { color: rgba(255,255,255,0.9); }
-    h1 { font-size: clamp(2rem, 6.4vw, 4.4rem); margin-bottom: clamp(14px, 2.5vw, 24px); letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2.4rem, 7.2vw, 6.2rem); margin-bottom: clamp(16px, 2.6vw, 28px); letter-spacing: -0.03em; }
     h1 .thin { display: block; font-weight: 300; font-size: 0.62em; margin-bottom: 0.08em; }
     h1 .fat  { display: block; font-weight: 800; letter-spacing: -0.035em; }
-    h2 { font-size: clamp(1.6rem, 4.6vw, 3rem); margin-bottom: clamp(14px, 2.4vw, 26px); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.9rem, 5.4vw, 4.1rem); margin-bottom: clamp(16px, 2.6vw, 30px); letter-spacing: -0.02em; }
     h2 .accent { font-weight: 800; color: var(--tangerine); }
-    .lead { font-size: clamp(1.05rem, 2.4vw, 1.5rem); color: var(--muted); max-width: 800px; line-height: 1.5; }
+    .lead { font-size: clamp(1.2rem, 2.9vw, 2rem); color: var(--muted); max-width: 920px; line-height: 1.5; }
     .tint .lead { color: rgba(255,255,255,0.95); }
     .dark .lead { color: #C9C9D6; }
-    .name-line { margin-top: clamp(20px, 4vw, 38px); font-weight: 700; font-size: clamp(1rem, 2.2vw, 1.25rem); }
+    .name-line { margin-top: clamp(24px, 4vw, 44px); font-weight: 700; font-size: clamp(1.1rem, 2.4vw, 1.55rem); }
     .tint .name-line span { color: rgba(255,255,255,0.8); font-weight: 600; }
     .name-line span { color: var(--muted); font-weight: 600; }
 
     /* Pains */
-    .pains { margin-top: clamp(18px, 3vw, 34px); display: grid; gap: clamp(12px, 1.8vw, 18px); }
-    .pain { display: flex; gap: 16px; align-items: flex-start; font-size: clamp(1.05rem, 2.5vw, 1.55rem); line-height: 1.35; }
+    .pains { margin-top: clamp(22px, 3.4vw, 40px); display: grid; gap: clamp(14px, 2vw, 22px); }
+    .pain { display: flex; gap: 18px; align-items: flex-start; font-size: clamp(1.2rem, 3vw, 2.05rem); line-height: 1.35; }
     .pain .n {
-      flex: none; width: clamp(30px, 5vw, 40px); height: clamp(30px, 5vw, 40px); border-radius: 50%;
+      flex: none; width: clamp(36px, 5.4vw, 52px); height: clamp(36px, 5.4vw, 52px); border-radius: 50%;
       background: rgba(224,90,32,0.13); color: var(--sienna); font-weight: 800;
-      display: flex; align-items: center; justify-content: center; font-size: clamp(0.9rem, 2vw, 1.15rem);
+      display: flex; align-items: center; justify-content: center; font-size: clamp(1rem, 2.2vw, 1.45rem);
     }
 
     /* Compare */
     .cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.5vw, 26px); margin-top: clamp(18px, 3vw, 32px); }
     .col { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: clamp(20px, 3vw, 32px); }
     .col.good { border: 2px solid var(--tangerine); }
-    .col h3 { font-weight: 500; font-size: clamp(1.05rem, 2.2vw, 1.4rem); margin-bottom: 14px; }
+    .col h3 { font-weight: 500; font-size: clamp(1.2rem, 2.5vw, 1.75rem); margin-bottom: 16px; }
     .col ul { list-style: none; }
-    .col li { position: relative; padding: 10px 0 10px 30px; color: var(--muted); border-top: 1px solid var(--line); font-size: clamp(0.98rem, 1.9vw, 1.18rem); line-height: 1.35; }
+    .col li { position: relative; padding: 12px 0 12px 32px; color: var(--muted); border-top: 1px solid var(--line); font-size: clamp(1.08rem, 2.1vw, 1.5rem); line-height: 1.35; }
     .col li:first-of-type { border-top: none; }
     .col.good li { color: var(--ink); }
     .col li::before { position: absolute; left: 0; top: 10px; font-weight: 800; }
@@ -92,27 +92,27 @@
     .box { background: var(--white); border-radius: 16px; padding: clamp(20px, 2.6vw, 30px); border-top: 4px solid var(--tangerine); }
     .box:nth-child(2) { border-top-color: var(--sienna); }
     .box:nth-child(3) { border-top-color: var(--navy); }
-    .box h3 { font-weight: 500; font-size: clamp(1.05rem, 2vw, 1.3rem); margin-bottom: 10px; }
-    .box p { color: var(--muted); font-size: clamp(0.95rem, 1.8vw, 1.12rem); line-height: 1.4; }
-    .chips { margin-top: clamp(20px, 3.5vw, 36px); display: flex; flex-wrap: wrap; gap: 10px; }
-    .chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; font-weight: 600; font-size: clamp(0.85rem, 1.7vw, 1.02rem); }
+    .box h3 { font-weight: 500; font-size: clamp(1.18rem, 2.3vw, 1.65rem); margin-bottom: 10px; }
+    .box p { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.38rem); line-height: 1.4; }
+    .chips { margin-top: clamp(20px, 3.5vw, 40px); display: flex; flex-wrap: wrap; gap: 11px; }
+    .chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: clamp(0.95rem, 1.9vw, 1.28rem); }
     .chip b { color: var(--sienna); }
 
     /* Scope tags */
     .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(18px, 3vw, 28px); }
-    .tag { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: clamp(0.95rem, 1.9vw, 1.15rem); }
-    .addon-note { margin-top: clamp(20px, 3vw, 30px); color: var(--muted); font-size: clamp(0.95rem, 1.9vw, 1.15rem); }
+    .tag { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 11px 20px; font-weight: 600; font-size: clamp(1.08rem, 2.1vw, 1.45rem); }
+    .addon-note { margin-top: clamp(22px, 3vw, 34px); color: var(--muted); font-size: clamp(1.08rem, 2.1vw, 1.45rem); }
     .addon-note b { color: var(--ink); }
 
     /* Price slide (navy) */
-    .price-big { font-size: clamp(3.4rem, 12vw, 7rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .price-big { font-size: clamp(3.8rem, 13vw, 9rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
     .price-big .u { font-size: 0.32em; font-weight: 600; color: var(--peach); }
-    .price-sub { font-size: clamp(1.05rem, 2.4vw, 1.5rem); color: #C9C9D6; margin-top: 12px; }
-    .price-list { list-style: none; margin-top: clamp(22px, 3.5vw, 34px); display: grid; gap: 10px; }
-    .price-list li { position: relative; padding-left: 34px; font-size: clamp(1rem, 2.1vw, 1.3rem); color: #E9E9EE; }
+    .price-sub { font-size: clamp(1.2rem, 2.8vw, 2rem); color: #C9C9D6; margin-top: 14px; }
+    .price-list { list-style: none; margin-top: clamp(24px, 3.5vw, 38px); display: grid; gap: 12px; }
+    .price-list li { position: relative; padding-left: 36px; font-size: clamp(1.1rem, 2.3vw, 1.65rem); color: #E9E9EE; }
     .price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--tangerine); font-weight: 800; }
-    .roi { margin-top: clamp(24px, 4vw, 38px); border-left: 4px solid var(--tangerine); padding: clamp(16px, 2.4vw, 22px) clamp(18px, 2.6vw, 26px);
-      background: rgba(255,255,255,0.06); border-radius: 0 14px 14px 0; font-size: clamp(1rem, 2vw, 1.28rem); line-height: 1.45; color: #EDEDF2; }
+    .roi { margin-top: clamp(26px, 4vw, 42px); border-left: 4px solid var(--tangerine); padding: clamp(18px, 2.4vw, 26px) clamp(20px, 2.6vw, 30px);
+      background: rgba(255,255,255,0.06); border-radius: 0 14px 14px 0; font-size: clamp(1.1rem, 2.2vw, 1.6rem); line-height: 1.45; color: #EDEDF2; }
     .roi b { color: var(--peach); }
 
     /* Nav */
