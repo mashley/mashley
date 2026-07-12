@@ -132,9 +132,15 @@
     #fs { position: fixed; top: 16px; right: 16px; z-index: 50; border: none; cursor: pointer;
       background: rgba(26,26,46,0.6); color: #fff; border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; }
     #fs:hover { background: var(--tangerine); }
-    #back { position: fixed; top: 16px; left: 16px; z-index: 50; text-decoration: none;
-      background: rgba(26,26,46,0.6); color: #fff; border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; }
-    #back:hover { background: var(--tangerine); }
+    #back { position: fixed; right: 20px; bottom: 20px; z-index: 40; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(26,26,46,0.82); color: #fff; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em;
+      padding: 10px 16px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      opacity: 0.45; transition: opacity .15s ease, transform .15s ease, background .15s ease; }
+    #back:hover { opacity: 1; transform: translateY(-2px); background: var(--tangerine); }
+    /* Hide the utility buttons while presenting in fullscreen */
+    :fullscreen #back, :fullscreen #fs { display: none; }
+    :-webkit-full-screen #back, :-webkit-full-screen #fs { display: none; }
     #bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--navy); width: 0; z-index: 50; transition: width 0.4s ease; }
     .tint ~ #bar { background: var(--navy); }
 
