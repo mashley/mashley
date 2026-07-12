@@ -78,19 +78,9 @@
       padding: 26px 32px;
       max-width: 1120px; margin: 0 auto;
     }
-    .nav .brand {
-      position: relative; display: inline-block; background: var(--white); color: var(--tangerine);
-      font-weight: 800; letter-spacing: -0.01em; font-size: 1.1rem; line-height: 1;
-      text-decoration: none; padding: 8px 13px; border-radius: 0;
-      transition: color .15s ease, transform .15s ease;
-    }
-    .nav .brand:hover { color: var(--sienna); transform: translateY(-1px); }
-    /* Cream asterisk that breaks the box corner */
-    .nav .brand .brand-star {
-      position: absolute; top: -0.68em; right: -0.42em;
-      font-size: 2em; line-height: 1; font-weight: 700;
-      color: var(--cream); pointer-events: none;
-    }
+    .nav .brand { display: inline-block; line-height: 0; transition: transform .15s ease; }
+    .nav .brand:hover { transform: translateY(-1px); }
+    .nav .brand img { display: block; height: 46px; width: auto; }
     .nav .links { display: flex; gap: 30px; align-items: center; }
     .nav .links a {
       color: var(--white); text-decoration: none; font-weight: 500;
@@ -256,7 +246,7 @@
   <!-- ============================ HERO ============================ -->
   <header class="hero">
     <nav class="nav">
-      <a href="#top" class="brand">Mash<span class="brand-star">*</span></a>
+      <a href="#top" class="brand"><img src="images/SVG/mash-logo.svg" alt="Mash"></a>
       <div class="links">
         <a href="#approach">Approach</a>
         <a href="#advising">Advising</a>
