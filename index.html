@@ -99,14 +99,14 @@
     }
     .hero .wrap { position: relative; z-index: 3; width: 100%; }
     .hero .eyebrow { color: rgba(255,255,255,0.92); margin-bottom: 26px; display: block; }
-    .hero h1 { max-width: 16ch; margin-bottom: 28px; letter-spacing: -0.03em; }
+    .hero h1 { max-width: none; margin-bottom: 28px; letter-spacing: -0.03em; }
     .hero h1 .thin {
       display: block; font-weight: 300; line-height: 1.05; margin-bottom: 0.05em;
       font-size: clamp(1.5rem, 3.4vw, 2.9rem); color: rgba(255,255,255,0.95);
     }
     .hero h1 .fat {
       display: block; font-weight: 800; line-height: 0.98; letter-spacing: -0.038em;
-      font-size: clamp(2.9rem, 7.2vw, 6rem);
+      font-size: clamp(2rem, 8vw, 6rem); white-space: nowrap;
     }
     /* Reverse block: white bar, orange text (credentials strip) */
     .cred-bar {
@@ -239,6 +239,7 @@
       .nav .links a:not(.pill) { display: none; }
       .wrap { padding: 0 22px; }
       .hero { min-height: 92vh; padding: 120px 0 80px; }
+      .hero h1 .fat { white-space: normal; }
       .stats { grid-template-columns: 1fr 1fr; gap: 18px; }
       footer .wrap { flex-direction: column; align-items: flex-start; }
     }
