@@ -76,7 +76,6 @@
       max-width: 1120px; margin: 0 auto;
     }
     .nav .brand { color: var(--white); font-weight: 700; letter-spacing: 0.02em; font-size: 1.05rem; text-decoration: none; }
-    .nav .brand .star { font-size: 0.55em; vertical-align: super; font-weight: 500; }
     .nav .links { display: flex; gap: 30px; align-items: center; }
     .nav .links a {
       color: var(--white); text-decoration: none; font-weight: 500;
@@ -196,8 +195,8 @@
     /* ---------- Footer ---------- */
     footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 46px 0; }
     footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-    footer .name { color: var(--white); font-weight: 700; }
-    footer .foot-note { display: block; margin-top: 7px; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    footer .name { color: var(--white); font-weight: 700; text-decoration: none; }
+    footer .name:hover { color: var(--tangerine); }
     footer .meta { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.12em; }
 
     /* ============================================================
@@ -226,7 +225,7 @@
   <!-- ============================ HERO ============================ -->
   <header class="hero">
     <nav class="nav">
-      <a href="#top" class="brand">MASH<span class="star">*</span></a>
+      <a href="#top" class="brand">MASH</a>
       <div class="links">
         <a href="#approach">Approach</a>
         <a href="#advising">Advising</a>
@@ -391,10 +390,7 @@
 
   <footer>
     <div class="wrap">
-      <div>
-        <span class="name">Michael "Mash" Ashley</span>
-        <span class="foot-note">* Michael.Ashley @ Mashley.com ;-)</span>
-      </div>
+      <a class="name" href="https://calendly.com/foclarity/30min" target="_blank" rel="noopener">Michael "Mash" Ashley</a>
       <span class="meta">Founder · Advisor · Builder · Silicon Valley</span>
     </div>
   </footer>
