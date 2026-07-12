@@ -159,6 +159,17 @@
     footer a { color: var(--white); text-decoration: none; font-weight: 700; }
     footer a:hover { color: var(--tangerine); }
 
+    /* Subtle "present" button → opens the slide deck */
+    .present-btn {
+      position: fixed; right: 20px; bottom: 20px; z-index: 40;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(26,26,46,0.82); color: #fff; text-decoration: none;
+      font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em;
+      padding: 10px 16px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      opacity: 0.45; transition: opacity .15s ease, transform .15s ease, background .15s ease;
+    }
+    .present-btn:hover { opacity: 1; transform: translateY(-2px); background: var(--tangerine); }
+
     @media (max-width: 760px) {
       .pain-grid, .compare, .why-grid, .cover-wrap, .price-panel { grid-template-columns: 1fr; }
       .price-panel { padding: 36px 28px; }
@@ -354,6 +365,8 @@
       <a href="../">Michael "Mash" Ashley</a> · Fractional CMO for technical founders
     </div>
   </footer>
+
+  <a class="present-btn" href="../cmo-deck/" aria-label="Present as slides">▸&nbsp; Present</a>
 
 </body>
 </html>
