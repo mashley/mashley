@@ -26,8 +26,6 @@
       --ink:       #1C1B24;   /* body text on light                   */
       --muted:     #6E6874;   /* soft grey text                       */
       --line:      #ECE1D8;   /* hairline borders                     */
-      --butter:    #F4C24C;   /* warm gold — creative accent          */
-      --plum:      #7B5BD1;   /* violet — creative accent             */
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -109,17 +107,6 @@
     .hero .cta-row { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
     .hero .cta-note { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
 
-    /* Abstract editorial composition bleeding off the right edge */
-    .hero-art {
-      position: absolute; right: -80px; top: 50%; transform: translateY(-50%);
-      width: min(48vw, 640px); height: auto; z-index: 1; pointer-events: none;
-    }
-    /* Marker-highlight on a key word in the headline */
-    .hl {
-      color: var(--navy); background: var(--butter);
-      padding: 0.02em 0.22em; border-radius: 6px;
-      -webkit-box-decoration-break: clone; box-decoration-break: clone;
-    }
 
     /* Vertical rotated sidebar label */
     .vlabel {
@@ -219,7 +206,6 @@
       .work-grid { gap: 1px; }
       .proof-grid { grid-template-columns: 1fr; gap: 40px; }
       .stats { grid-template-columns: 1fr 1fr; }
-      .hero-art { width: 78vw; right: -60px; opacity: 0.30; }
       .hero h1, .hero p.lead { max-width: 100%; }
       .vlabel { display: none; }
     }
@@ -250,20 +236,9 @@
 
     <span class="vlabel">Mashley.com · Silicon Valley</span>
 
-    <!-- Abstract editorial composition: organic curves + dot texture (brand motifs) -->
-    <svg class="hero-art" viewBox="0 0 600 640" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="410" cy="205" r="178" fill="#F4C24C"/>
-      <path d="M325 255 C438 240 532 315 517 425 C504 522 408 594 306 568 C216 545 170 470 186 386 C199 316 230 268 325 255 Z" fill="#1A1A2E"/>
-      <circle cx="316" cy="252" r="132" stroke="#7B5BD1" stroke-width="9"/>
-      <g fill="#FFFFFF" opacity="0.9">
-        <circle cx="500" cy="150" r="6"/><circle cx="530" cy="178" r="6"/><circle cx="484" cy="186" r="6"/>
-        <circle cx="526" cy="214" r="6"/><circle cx="498" cy="220" r="6"/>
-      </g>
-    </svg>
-
     <div class="wrap">
       <span class="eyebrow">Founder · Advisor · Venture Builder</span>
-      <h1>When growth stalls, I help founders get <span class="hl">moving</span> again.</h1>
+      <h1>When growth stalls, I help founders get moving again.</h1>
       <p class="lead">I'm Mash Ashley — 25 years, four exits, and a track record of turning stalled
          ideas into real, self-sustaining companies. I work with growth-stage founders to sharpen the
          decisions that actually move the business.</p>
