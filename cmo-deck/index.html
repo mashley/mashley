@@ -133,11 +133,12 @@
       background: rgba(26,26,46,0.6); color: #fff; border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; }
     #fs:hover { background: var(--tangerine); }
     #back { position: fixed; right: 20px; bottom: 20px; z-index: 40; text-decoration: none;
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(26,26,46,0.82); color: #fff; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em;
-      padding: 10px 16px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 46px; height: 46px; border-radius: 50%;
+      background: rgba(26,26,46,0.82); color: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.18);
       opacity: 0.45; transition: opacity .15s ease, transform .15s ease, background .15s ease; }
     #back:hover { opacity: 1; transform: translateY(-2px); background: var(--tangerine); }
+    #back svg { width: 18px; height: 18px; display: block; }
     /* Hide all chrome while presenting in fullscreen — just the slides */
     :fullscreen #back, :fullscreen #fs, :fullscreen #nav, :fullscreen #bar { display: none; }
     :-webkit-full-screen #back, :-webkit-full-screen #fs, :-webkit-full-screen #nav, :-webkit-full-screen #bar { display: none; }
@@ -153,7 +154,9 @@
 
 <body>
   <div id="bar"></div>
-  <a id="back" href="../cmo/" title="Back to the page">← Back</a>
+  <a id="back" href="../cmo/" title="Close" aria-label="Close presentation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </a>
   <button id="fs" title="Fullscreen (F)">⛶ Fullscreen</button>
 
   <div id="deck">
